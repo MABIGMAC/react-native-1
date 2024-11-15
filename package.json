@@ -3,6 +3,10 @@
     "concurrently": "^9.1.0"
   },
   "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install": "npm install && npm run install:backend && npm run install:frontend",
+    "dev": "concurrently -c yellow,blue \"cd backend && npm run start\" \"cd frontend && npm run start\"",
     "prepare": "husky",
     "test": "concurrently -c yellow,blue \"cd backend && npm run lint\" \"cd frontend && npm run lint\""
   },
