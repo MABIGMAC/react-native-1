@@ -11,6 +11,7 @@ export class UserController {
     return this.userService.findAll(sort);
   }
 
+  New
   @Get(':id')
   findUserId(@Param() id: string) {
     return this.userService.findUserId(id);
